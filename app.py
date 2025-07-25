@@ -12,10 +12,8 @@ load_dotenv()
 search_endpoint = os.getenv('search_endpoint')
 search_key = os.getenv('search_key')
 my_api_key = os.getenv("my_api_key")
-search_endpoint = os.getenv("search_endpoint")
 embedding_endpoint = os.getenv("embedding_endpoint")
 chat_endpoint = os.getenv("chat_endpoint")
-my_search_key = os.getenv("my_search_key")
 
 search_index_name = 'dandori-wiki'
 
@@ -23,7 +21,7 @@ keyword_client = SearchClient(endpoint=search_endpoint,
                              index_name=search_index_name,
                              credential=AzureKeyCredential(search_key))
 
-if not all([my_api_key, search_endpoint, embedding_endpoint, chat_endpoint, my_search_key]):
+if not all([my_api_key, search_endpoint, embedding_endpoint, chat_endpoint, search_key]):
     st.error("Missing one or more environment variables. Please check your .env file.")
     st.stop()
 
