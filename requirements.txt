@@ -2,5 +2,5 @@ python-dotenv
 azure_core
 azure_search_documents
 openai
-googleapiclient
+google-api-python-client 
 streamlit
