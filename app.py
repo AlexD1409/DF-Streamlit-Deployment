@@ -1,5 +1,5 @@
 import streamlit as st
-from build_7_utils import vector_search, basic_llm_response
+from utility import vector_search, basic_llm_response
 import os
 from dotenv import load_dotenv
 from azure.core.credentials import AzureKeyCredential
